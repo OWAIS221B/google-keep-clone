@@ -12,19 +12,32 @@
   min-height: 100vh;
   width: 100vw;
   padding: 23px;
-  background-color: #4267B2
+  background-color: white;
+  
 }
 
 .input-box {
   border: 2px solid black;
   padding: 23px;
+  background-color:  #4267B2;
+  border-radius: 5px;
 }
 
 input, textarea {
   width: 100%;
-  background-color: transparent;
+  background-color:  #4267B2;
   border: none;
-  outline: none;
+  outline: 2px white;
   margin-top: 6px;
   color: white;
+
+}
+
+button{
+  background-color:  #4267B2;
+  color: white;
+  padding: 8px 12px;
+  border: 1px solid white;
+  border-radius: 5px;
+  
 }
