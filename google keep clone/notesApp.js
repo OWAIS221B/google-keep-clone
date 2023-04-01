@@ -24,8 +24,8 @@ function showNotes(){
         console.log(notes[i]);  
         notesHTML += ` <div class="note">
                         <button>Delete</button>
-                        <div class="title">${notes[i].title}</div>
-                        <div class="text">${notes[i].tex}t</div>
+                        <div class="title">${notes[i].title === '' ? 'Note' : notes[i].title}</div>
+                        <div class="text">${notes[i].text}</div>
                    </div>
 
       `
