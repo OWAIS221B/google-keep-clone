@@ -46,6 +46,20 @@ button{
   
 }
 
+#notes{
+  padding: 23px;
+}
+
 .note{
+  width:200px;
+  color: black;
+  padding: 12px;
+  border: 1px solid #4267B2;
   background: tranparent;
+  border-radius: 5px;
+  
+}
+
+.deleteNote{
+  float: right;
 }
