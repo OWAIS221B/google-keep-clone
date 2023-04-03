@@ -33,6 +33,9 @@ function addNotes(){
     title: addTitle.value,
     text: addText.value,
    }   
+   //whenever we complete a note and click "add", the text fiels becomes empty again
+   addTitle.value = '';
+   addText.value = '';
    //5)new object should be in my notes , 
    //in order to check wether it is array👇👇
 
@@ -64,6 +67,8 @@ function showNotes(){
         console.log(notes[i]);  
         notesHTML += ` <div class="note">
                         <button class="deleteNote" data-index="${i}">Delete</button>
+                        <button class="archiveNote">Archive</button>
+                        <button class="editNote">Edit</button>
                         <div class="title">${notes[i].title === '' ? 'Note' : notes[i].title}</div>
                         <div class="text">${notes[i].text}</div>
                    </div>
