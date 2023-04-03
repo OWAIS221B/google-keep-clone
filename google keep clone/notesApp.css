@@ -49,7 +49,8 @@ button{
 #notes{
   padding: 23px;
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  /*justify-content: space-evenly;*/
 }
 
 .note{
@@ -64,5 +65,15 @@ button{
 }
 
 .deleteNote{
+  float: right;
+
+}
+
+.archiveNote{
+  float: right;
+  display: flex;
+}
+
+.editNote{
   float: right;
 }
