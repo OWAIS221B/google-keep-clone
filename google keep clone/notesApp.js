@@ -3,6 +3,7 @@ const addText = document.getElementById('addText');
 const addNoteButton = document.getElementById('addNote');
 const notesDiv = document.getElementById('notes');
 
+showNotes();
 // JSON.stringify converts notes array into string
 // localStorage.setItem('notes', JSON.stringify(notes));
 
@@ -62,7 +63,7 @@ function showNotes(){
     for(let i=0; i<notes.length; i++) {
         console.log(notes[i]);  
         notesHTML += ` <div class="note">
-                        <button class="deleteNote">Delete</button>
+                        <button class="deleteNote" data-index="${i}">Delete</button>
                         <div class="title">${notes[i].title === '' ? 'Note' : notes[i].title}</div>
                         <div class="text">${notes[i].text}</div>
                    </div>
@@ -71,6 +72,18 @@ function showNotes(){
     }
 
     notesDiv.innerHTML = notesHTML;
+    const deleteButtons = document.querySelectorAll('.deleteNote');
+    deleteButtons.forEach(button => {
+        button.addEventListener('click', deleteNote);
+    });
+}
+
+function deleteNote() {
+    const notes = JSON.parse(localStorage.getItem('notes'));
+    const index = this.dataset.index;
+    notes.splice(index, 1);
+    localStorage.setItem('notes', JSON.stringify(notes));
+    showNotes();
 }
  //1) first we introduced click event which calls "addNote" function👆👆
 addNoteButton.addEventListener('click', addNotes);
