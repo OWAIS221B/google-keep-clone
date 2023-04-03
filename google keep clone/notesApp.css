@@ -48,11 +48,14 @@ button{
 
 #notes{
   padding: 23px;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .note{
-  width:200px;
+  width:300px;
   color: black;
+  margin: 12px;
   padding: 12px;
   border: 1px solid #4267B2;
   background: tranparent;
